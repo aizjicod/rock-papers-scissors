@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: content-box;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#c299ff;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* first display */
+.first-display{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first-display .title{
+    margin-top:40vh;
+    font-size:2em;
+    font-weight: 100;
+}
+
+.play-button button{
+    margin-top:20px;
+    padding:.2em 2em;
+    border:none;
+    background:#808;
+    color:#fff;
+    font-size:3em;
+    text-transform: uppercase;
+}
+
+/* second display */
+
+.second-display{
+    display:flex;
+}
+
+.second-display .title{
+    margin-top:50px;
+    font-size:2em;
+    font-weight: 100;
+}
