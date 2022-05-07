@@ -6,8 +6,11 @@
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color:#c299ff;
+    
 }
 main{
+    height: 100vh;
+    background:#999;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +24,7 @@ main{
     align-items: center;
 }
 .first-display .title{
-    margin-top:40vh;
+    margin-top:20vh;
     font-size:2em;
     font-weight: 100;
 }
@@ -40,10 +43,55 @@ main{
 
 .second-display{
     display:flex;
+    flex-flow:wrap column;
+    justify-content: center;
+    align-items: center
 }
 
 .second-display .title{
     margin-top:50px;
     font-size:2em;
     font-weight: 100;
+    text-align:center;
+}
+h3{
+    position: relative;
+    top:100px;
+}
+.second__options{
+    margin-top:150px;
+    display:flex;
+    gap:100px;
+}
+.option__img{
+    width: 100px;
+    height: 100px;
+    padding:30px;
+    border-radius:100%;
+    background:#f299ff;
+}
+/* .paper-img, .rock-img,.scissors-img{
+    display:block;
+} */
+.result{
+    display:none;
+}
+
+@keyframes scales {
+    50%{
+        transform:scale(.9);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.draw{
+    background:#999;
+}
+.win{
+    
+}
+.loss{
+
 }
