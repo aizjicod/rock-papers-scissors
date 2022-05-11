@@ -4,12 +4,19 @@ const paper = document.querySelector(".paper-img");
 const rock = document.querySelector(".rock-img");
 const container = document.querySelector(".second__options");
 const h3 = document.getElementById("warrior");
-let result = document.querySelectorAll(".result")
-
-
+let result = document.querySelectorAll(".result");
+const btn__play = document.querySelector(".play-button");
+const firstDisplay = document.querySelector(".first-display");
+const secondDisplay = document.querySelector(".second-display");
 
 let warrior = undefined;
 let contricant = undefined;
+const showSecondDisplay = () =>{
+    firstDisplay.style.display = "none"
+    secondDisplay.style.display = "flex"
+};
+btn__play.addEventListener("click",showSecondDisplay);
+
 
 scissor.addEventListener("click", ()=>{
     scissor.style.animation = "scales 1s";
@@ -32,7 +39,7 @@ rock.addEventListener("click", ()=>{
     warrior = "rock"
     paper.style.display = "none";
     scissor.style.display = "none";
-    h3.textContent = `you had selected ${warrior}`;
+    // h3.textContent = `you had selected ${warrior}`;
     figth();
 });
 
@@ -56,44 +63,71 @@ const desicion = ()=>{
         case "rock":
             switch (contricant) {
                 case "rock":
-                    console.log("draw")
+                    // draw
+                    document.body.style.backgroundColor = "#888";
+                    h3.textContent = `it's a draw!!`;
                     break;
                 case "paper":
-                    console.log("loss")
+                    // loss
+                    document.body.style.backgroundColor = "#af1313";
+                    h3.textContent = `you LOST!!`;
                     break;
                 case "scissor":
-                    console.log("win")
+                    //win
+                    document.body.style.backgroundColor = "#181";
+                    h3.textContent = `you have WIN!!`;
                     break;
             }
         break;
         case "paper":
             switch (contricant) {
                 case "rock":
-                    console.log("win")
+                     //win
+                     document.body.style.backgroundColor = "#181";
+                     h3.textContent = `you have WIN!!`;
                     break;
                 case "paper":
-                    console.log("draw")
+                    // draw
+                    document.body.style.backgroundColor = "#888";
+                    h3.textContent = `it's a draw!!`;
                     break;
                 case "scissor":
-                    console.log("loss")
+                    // loss
+                    document.body.style.backgroundColor = "#af1313";
+                    h3.textContent = `you LOST!!`;
                     break;
             }
         break;
         case "scissor":
             switch (contricant) {
                 case "rock":
-                    console.log("loss")
+                    // loss
+                    document.body.style.backgroundColor = "#af1313";
+                    h3.textContent = `you LOST!!`;
                     break;
                 case "paper":
-                        console.log("win")
-                        break;
+                    //win
+                    document.body.style.backgroundColor = "#181";
+                    h3.textContent = `you have WIN!!`;
+                    break;
                 case "scissor":
-                    console.log("draw")
+                    // draw
+                    document.body.style.backgroundColor = "#888";
+                    h3.textContent = `it's a draw!!`;
                     break;
             }
         break;
     
     }
 }
+// const reload = () =>{
+//     location.reload()
+// };
 
+const btn__refresh = document.getElementById("refresh");
+
+btn__refresh.addEventListener("click",() =>{
+    location.reload()
+    btn__refresh.style.transform = "scale(.9)";
+});
 
